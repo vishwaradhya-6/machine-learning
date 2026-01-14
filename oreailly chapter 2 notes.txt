@@ -36,3 +36,23 @@ print('Feature Matrix\n', features[:3])
 print('Target Vector\n', target[:3])
 
 
+2.3 :
+
+loading a csv file
+
+import pandas as pd
+df = pd.read_csv(url)
+
+
+reading a json file
+
+df = pd.read_json(url,orient = "columns")
+
+
+2.4 :
+
+Querrying a sql database
+
+
+database_connection = create_engine("sqllite:///sample.db")
+df = pd.read_sql_query("select *from data",database_connection)
